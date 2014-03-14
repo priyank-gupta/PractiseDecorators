@@ -1,0 +1,3 @@
+class BookDecorator < BaseDecorator
+
+end

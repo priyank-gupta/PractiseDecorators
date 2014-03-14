@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @author_decorator.awesome %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @author.language %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @author.age %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= @author_decorator.link_to_destroy(url: author_path) %> |
+<%= link_to 'Back', authors_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @book.summary %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author.name %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @book.published_at %>
+</p>
+
+<p>
+  <strong>Publication:</strong>
+  <%= @book.publication %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @book.price %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<% store_decorate(@book) do |book| %>
+  <%= book.link_to_destroy(url: book_url) %> |
+<% end %>
+<%= link_to 'Back', books_path %>

@@ -1,0 +1,2 @@
+class ArticleDecorator < BaseDecorator
+end
